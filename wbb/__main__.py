@@ -115,26 +115,39 @@ home_keyboard_pm = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="Commands ❓", callback_data="bot_commands"
-            ),
-            InlineKeyboardButton(
-                text="Repo 🛠",
-                url="https://github.com/thehamkercat/WilliamButcherBot",
+                text="🔎 How to Use? Commands", callback_data="bot_commands"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="System Stats 🖥",
+                text="🖥 Bot Stats",
                 callback_data="stats_callback",
             ),
             InlineKeyboardButton(
-                text="Support 👨", url="http://t.me/WBBSupport"
+                text="👤Bot Owner",
+                user_id = 1926090919,
             ),
         ],
         [
             InlineKeyboardButton(
-                text="Add Me To Your Group 🎉",
+                text="✚ Add Me To Your Group",
                 url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="📨 Support",
+                url=f"http://t.me/AwesomeSupport",
+            ), 
+            InlineKeyboardButton(
+                text="🛠️ GitHub",
+                url=f"http://github.com/VasuXD",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="🎉 Awesome Bots",
+                url=f"http://t.me/LaylaBots",
             )
         ],
     ]
@@ -154,18 +167,19 @@ keyboard = InlineKeyboardMarkup(
                 url=f"t.me/{BOT_USERNAME}?start=help",
             ),
             InlineKeyboardButton(
-                text="Repo 🛠",
-                url="https://github.com/thehamkercat/WilliamButcherBot",
-            ),
+                text="🛠️ GitHub",
+                url=f"http://github.com/VasuXD",
+            ), 
         ],
         [
             InlineKeyboardButton(
                 text="System Stats 💻",
                 callback_data="stats_callback",
             ),
-            InlineKeyboardButton(text="Support 👨", url="t.me/WBBSupport"),
+            InlineKeyboardButton(text="Support 📨", url="t.me/AwesomeSupport"),
         ],
     ]
+)
 )
 
 
@@ -263,7 +277,7 @@ async def help_parser(name, keyboard=None):
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
         """Hello {first_name}, My name is {bot_name}.
-I'm a group management bot with some useful features.
+I'm a group management bot with lots of handy features.
 You can choose an option below, by clicking a button.
 Also you can ask anything in Support Group.
 """.format(
@@ -302,7 +316,7 @@ async def help_button(client, query):
     create_match = re.match(r"help_create", query.data)
     top_text = f"""
 Hello {query.from_user.first_name}, My name is {BOT_NAME}.
-I'm a group management bot with some usefule features.
+I'm a group management bot with lots of handy features.
 You can choose an option below, by clicking a button.
 Also you can ask anything in Support Group.
 
