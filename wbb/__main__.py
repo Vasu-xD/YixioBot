@@ -124,7 +124,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
                 callback_data="stats_callback",
             ),
             InlineKeyboardButton(
-                text="👤Bot Owner",
+                text="👤 Bot Owner",
                 user_id = 1926090919,
             ),
         ],
@@ -147,7 +147,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(
                 text="🎉 Awesome Bots",
-                url=f"http://t.me/LaylaBots",
+                url=f"http://t.me/VasuBots",
             )
         ],
     ]
@@ -179,7 +179,6 @@ keyboard = InlineKeyboardMarkup(
             InlineKeyboardButton(text="Support 📨", url="t.me/AwesomeSupport"),
         ],
     ]
-)
 )
 
 
@@ -336,7 +335,7 @@ General command are:
         await query.message.edit(
             text=text,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("back", callback_data="help_back")]]
+                [[InlineKeyboardButton("🔙 Back", callback_data="help_back")]]
             ),
             disable_web_page_preview=True,
         )
