@@ -34,6 +34,10 @@
             "description": "Sudo users have full access to everythin, don't trust anyone... ex:- 123456 654311 123456",
             "required": true
         },
+        "OWNER_ID": {
+            "description": "Owner have full access to everythin, don't trust anyone... ex:- 123456 654311 123456",
+            "required": true
+        },
         "LOG_GROUP_ID": {
             "description": "For logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
             "required": true
