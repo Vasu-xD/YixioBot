@@ -33,6 +33,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from wbb import (
     BOT_NAME,
     BOT_USERNAME,
+    OWNER_ID,
     LOG_GROUP_ID,
     USERBOT_NAME,
     aiohttpsession,
@@ -125,29 +126,13 @@ home_keyboard_pm = InlineKeyboardMarkup(
             ),
             InlineKeyboardButton(
                 text="👤 Bot Owner",
-                user_id = 1926090919,
+                user_id = {OWNER_ID},
             ),
         ],
         [
             InlineKeyboardButton(
                 text="✚ Add Me To Your Group",
                 url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="📨 Support",
-                url=f"http://t.me/AwesomeSupport",
-            ), 
-            InlineKeyboardButton(
-                text="🛠️ GitHub",
-                url=f"http://github.com/VasuXD",
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="🎉 Awesome Bots",
-                url=f"http://t.me/VasuBots",
             )
         ],
     ]
@@ -167,16 +152,9 @@ keyboard = InlineKeyboardMarkup(
                 url=f"t.me/{BOT_USERNAME}?start=help",
             ),
             InlineKeyboardButton(
-                text="🛠️ GitHub",
-                url=f"http://github.com/VasuXD",
-            ), 
-        ],
-        [
-            InlineKeyboardButton(
                 text="System Stats 💻",
                 callback_data="stats_callback",
             ),
-            InlineKeyboardButton(text="Support 📨", url="t.me/AwesomeSupport"),
         ],
     ]
 )
