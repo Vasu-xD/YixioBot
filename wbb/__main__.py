@@ -126,7 +126,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
             ),
             InlineKeyboardButton(
                 text="👤 Bot Owner",
-                user_id = {OWNER_ID},
+                user_id = 5337486501,
             ),
         ],
         [
